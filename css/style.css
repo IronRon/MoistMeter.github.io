@@ -1,0 +1,243 @@
+body {
+    background-color: rgb(211, 245, 245);
+    color: black;
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media only screen and (max-width:600px) {
+    body{
+        font-size: 0.65rem;
+    }
+}
+
+footer {
+    background-color: #37fbcd;
+    text-align: center;
+    padding: 5px;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+}
+
+.SelectImage {
+    width: 21vw;
+    height: 20vw;
+    border-width: 5px;
+    border-color: rgb(123, 255, 255);
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin: 5vw;
+}
+
+.imgClick {
+    height: 100%;
+    width: 100%;
+}
+
+#Moist {
+    width: 13vw;
+    display: inline-block;
+}
+
+.SelectImage:hover {
+    transform: scale(1.15);
+    transition-duration: 1s;
+}
+
+.dark-mode {
+    background-color: rgb(44, 10, 10);
+    color: white;
+}
+
+.light-mode {
+    background-color: rgb(211, 245, 245);
+    color: black;
+}
+
+.navbar {
+    background-color: #37fbcd;
+    width: 100%;
+}
+
+.Celestial {
+    margin: 5px;
+}
+
+.Celestial img {
+    width: 2vw;
+}
+
+.game {
+    width: 50vw;
+}
+
+#next {
+    z-index: 3;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+}
+
+#higher {
+    z-index: 3;
+    position: absolute;
+    top: 47vh;
+    left: 50vw;
+}
+
+#lower {
+    z-index: 3;
+    position: absolute;
+    top: 53vh;
+    left: 50vw;
+}
+
+#vid {
+    border-width: 5px;
+    border-color: rgb(123, 255, 255);
+    border-style: double;
+    position: relative;
+    width: 80vw;
+    height: 45vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: purple;
+    padding: 5px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.Rating {
+    font-size: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+}
+
+table, td {
+    /*border: solid 3px black;*/
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table {
+    width: 80vw;
+    margin-left: 9vw;
+}
+
+.left {
+    float: right;
+}
+
+.right {
+    text-align: center;
+}
+
+#poster {
+    width: 21vw;
+    height: 23vw;
+    border-width: 5px;
+    border-color: rgb(123, 255, 255);
+    border-style: solid;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.para {
+    width: 90%;
+    margin: auto;
+    border: 3px black solid;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #8be4ff;
+}
+
+#Contact {
+    width: 60%;
+    margin: auto;
+    border: 5px rgb(123, 255, 255) solid;
+    background-color: #8be4ff;
+    margin-bottom: 10px;
+}
+
+#Contact form {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#Contact form textarea{
+    width: 100%;
+}
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
+}
+
+#charliedesc p {
+    display: inline-block;
+    width: 65%;
+}
+
+#charliedesc img {
+    margin: 10px;
+    display: inline-block;
+    background-color: gray;
+    border-style: solid;
+    border-color: grey;
+    border-width: 7px;
+    border-radius: 20px;
+    width: 25vw;  
+    display: inline-block;
+}
+
+#moistlinks img{
+    display: inline-block;
+    width: 13vw;
+    margin: 10px;
+}
+
+#list{
+    font-size: 0.8em;
+}
+ 
+.media{
+   display: list-item;    
+}
+
+#moistmeter {
+    width: 25vw;
+    transform: rotate(270deg);
+    position:relative;
+    top: 170px;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: rgb(0, 216, 219);
+}
+meter::-moz-meter-bar { /* Firefox Pseudo Class */
+    background: rgb(0, 216, 219);
+}
