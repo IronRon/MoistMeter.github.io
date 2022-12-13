@@ -1,3 +1,7 @@
+<!--
+Student name and number: Ronak Pathak, C22309236
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,9 +64,11 @@
         </nav>
     </header>
 
-    <h1>About this Website</h1>
-    <p>This Website is based off of reviews made by the Youtuber penguinz0 who also goes by his Twitch streamer name
-        MoistCr1TiKaL.</p>
+    <div class="para">
+        <h1>About this Website</h1>
+        <p>This Website is based off of reviews made by the Youtuber penguinz0 who also goes by his Twitch streamer name
+            MoistCr1TiKaL.</p>
+    </div>
 
     <br>
 
@@ -79,21 +85,12 @@
 
     <div class="para" id="moistlinks">
         <h2>Moist Links</h2>
-        <a href="https://www.youtube.com/@penguinz0/featured">
-            <img src="images/YouTube.png" alt="Youtube">
-        </a>
-        <a href="https://twitter.com/MoistCr1TiKaL">
-            <img src="images/twitter.png" alt="twitter">
-        </a>
-        <a href="https://www.instagram.com/bigmoistcr1tikal/?hl=en">
-            <img src="images/Instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.twitch.tv/moistcr1tikal">
-            <img src="images/twitch.png" alt="Twitch">
-        </a>
-        <a href="https://www.tiktok.com/@hugecharles">
-            <img src="images/tiktok.png" alt="Tiktok">
-        </a>
+        <a href="https://www.youtube.com/@penguinz0/featured"><img src="images/YouTube.png" alt="Youtube"></a>
+        <a href="https://twitter.com/MoistCr1TiKaL"><img src="images/twitter.png" alt="twitter"></a>
+        <a href="https://www.instagram.com/bigmoistcr1tikal/?hl=en"><img src="images/Instagram.png" alt="Instagram"></a>
+        <a href="https://www.twitch.tv/moistcr1tikal"><img src="images/twitch.png" alt="Twitch"></a>
+        <a href="https://www.tiktok.com/@hugecharles"><img src="images/tiktok.png" alt="Tiktok"></a>
+        <a href="https://discord.com/invite/charlie"><img src="images/discord-v2.svg" alt="discord"></a>
     </div>
 
     <br>
@@ -115,15 +112,15 @@
 
     <section id="Contact">
         <h2>Contact Form</h2>
-        <form action="server-script-url" method="post" onsubmit="return false">
+        <form action="server-script-url" name="myForm" onsubmit="return validateForm()" method="post">
             <label for="firstname">First Name</label>
-            <input type="text" placeholder="Enter your first name" id="firstName" />
+            <input type="text" name="fname" placeholder="Enter your first name" id="firstName"/>
             <br><br>
             <label for="lastname">Last Name</label>
-            <input type="text" placeholder="Enter your last name" id="lastName" />
+            <input type="text" name="lname" placeholder="Enter your last name" id="lastName"/>
             <br><br>
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Enter your email" id="email" />
+            <input type="email" name="email" placeholder="Enter your email" id="email"/>
             <br><br>
             <p>How was your experience on this website?</p>
             <input type="radio" name="feel" id="excellent">
@@ -150,12 +147,18 @@
             <input type="checkbox" id="update">
             <label for="update">Send me monthly newsletter</label>
             <br><br>
-            <button onclick="sendContact();">Send form</button>
+            <input type="submit" value="Submit">
         </form>
     </section>
 
     <footer id="foot">
         <p>Made by Ronak</p>
+        <a href="#"><img src="images/gmail.png" alt="Gmail"></a>
+        <a href="#"><img src="images/Instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/twitch.png" alt="Twitch"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/YouTube.png" alt="Youtube"></a>
+        <a href="#"><img src="images/discord-v2.svg" alt="discord"></a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

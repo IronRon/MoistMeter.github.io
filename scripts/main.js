@@ -1,6 +1,6 @@
 function darkMode() {
     const para = document.getElementsByClassName("para");
-    console.log(para);
+    const rate = document.getElementsByClassName("ratebox");
     const border = document.getElementsByClassName("SelectImage");
     const element = document.body;
     element.className = "dark-mode";
@@ -9,13 +9,21 @@ function darkMode() {
     document.getElementById("nav").style.backgroundColor = "#c80432";
     document.getElementById("foot").style.backgroundColor = "#c80432";
 
-    if(document.getElementById("Contact") != null)
-    {
+    if (document.getElementById("Contact") != null) {
         document.getElementById("Contact").style.backgroundColor = "#a81b1b";
         document.getElementById("Contact").style.borderColor = "#840000";
     }
-   
+
+    if (document.getElementById("poster") != null) {
+        document.getElementById("poster").style.borderColor = "#840000";
+    }
+
     document.getElementById("foot").style.color = "white";
+
+    for (let i = 0; i < rate.length; i++) {
+        rate[i].style.backgroundColor = "#a81b1b";
+        rate[i].style.borderColor = "#840000";
+    }
 
     for (let i = 0; i < para.length; i++) {
         para[i].style.backgroundColor = "#a81b1b";
@@ -28,11 +36,12 @@ function darkMode() {
     for (let i = 0; i < vid.length; i++) {
         vid[i].style.borderColor = "#c80432";
     }
-   
+
 }
 
 function lightMode() {
     const para = document.getElementsByClassName("para");
+    const rate = document.getElementsByClassName("ratebox");
     const border = document.getElementsByClassName("SelectImage");
     const element = document.body;
     element.className = "light-mode";
@@ -40,13 +49,22 @@ function lightMode() {
     imageMode.src = "images/MoistMeter.png";
     document.getElementById("nav").style.backgroundColor = "#37fbcd";
     document.getElementById("foot").style.backgroundColor = "#37fbcd";
-    if(document.getElementById("Contact") != null)
-    {
+
+    if (document.getElementById("Contact") != null) {
         document.getElementById("Contact").style.backgroundColor = "#8be4ff";
         document.getElementById("Contact").style.borderColor = "#7bffff";
     }
 
+    if (document.getElementById("poster") != null) {
+        document.getElementById("poster").style.borderColor = "#7bffff";
+    }
+
     document.getElementById("foot").style.color = "black";
+
+    for (let i = 0; i < rate.length; i++) {
+        rate[i].style.backgroundColor = "#8be4ff";
+        rate[i].style.borderColor = "#7bffff";
+    }
 
     for (let i = 0; i < para.length; i++) {
         para[i].style.backgroundColor = "#8be4ff";
@@ -85,6 +103,61 @@ function search() {
     }
 
     return false
+}
+
+function validateForm() {
+    let fname = document.forms["myForm"]["fname"].value;
+    if (fname == "") {
+      alert("First name must be filled out");
+      return false;
+    }
+
+    let lname = document.forms["myForm"]["lname"].value;
+    if (lname == "") {
+      alert("Last name must be filled out");
+      return false;
+    }
+
+    let email = document.forms["myForm"]["email"].value;
+    if (email == "") {
+      alert("Email must be filled out");
+      return false;
+    }
+
+    return false
+}
+
+//slideshow functions
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) { 
+        slideIndex = slides.length 
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" actives", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " actives";
 }
 
 /*
